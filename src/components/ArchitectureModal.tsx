@@ -16,23 +16,38 @@ export default function ArchitectureModal({ isOpen, onClose, project }: Architec
   const specs = isESG 
     ? {
         title: 'ESG Forge Architecture',
-        subtitle: 'Automated, Audit-Ready Regulatory Disclosures',
-        throughput: '15,000 webhooks/sec burst capacity',
-        latency: '< 45ms end-to-end ingest latency',
+        subtitle: 'Automated, Audit-Ready Regulatory Disclosures for Shopify Plus',
+        throughput: '15,000+ webhooks/sec burst capacity (edge + async)',
+        latency: '< 200ms end-to-end ingest-to-emissions',
         availability: '99.99% Ingestion SLA',
-        techStack: ['TypeScript', 'AWS Lambda', 'SQS', 'DynamoDB', 'S3 Glacier', 'Shopify Plus API'],
+        techStack: [
+          'Next.js 15 (App Router)',
+          'TypeScript',
+          'Tailwind CSS',
+          'Better Auth',
+          'Next.js Route Handlers',
+          'Cloudflare Workers',
+          'Totalum Built-in DB (Postgres)',
+          'Cloudflare Queues',
+          'Climatiq API',
+          '@react-pdf/renderer',
+          'Stripe Payments',
+          'Sentry & Pino',
+          'opennextjs-cloudflare'
+        ],
         nodes: [
-          { id: 'shopify', label: 'Shopify Plus Webhooks', type: 'source', desc: 'Secure HTTPS POST with HMAC headers verification' },
-          { id: 'gateway', label: 'AWS API Gateway', type: 'edge', desc: 'DDoS mitigation, rate-limiting & request validation' },
-          { id: 'queue', label: 'Amazon SQS Queue', type: 'mq', desc: 'Buffering & guaranteed delivery of webhook events' },
-          { id: 'lambda', label: 'Lambda Parser (VPC)', type: 'compute', desc: 'Parallel extraction of ESG & CSRD compliance data' },
-          { id: 'db', label: 'DynamoDB Ledger', type: 'db', desc: 'Idempotent, highly structured carbon footprint ledger' },
-          { id: 'vault', label: 'S3 + Glacier Vault', type: 'storage', desc: 'Cryptographically signed audit PDF storage with WORM policy' }
+          { id: 'shopify', label: 'Shopify Plus Webhooks', type: 'source', desc: 'Secure HTTPS with HMAC-SHA256 payload verification' },
+          { id: 'edge', label: 'Next.js Edge Functions', type: 'edge', desc: 'Cloudflare Workers (opennextjs-cloudflare) immediate 200 OK' },
+          { id: 'queue', label: 'Cloudflare Queues', type: 'mq', desc: 'Durable queues & async Durable Objects processing' },
+          { id: 'climatiq', label: 'Climatiq API Engine', type: 'compute', desc: 'Batch automated server-side Scope 3 emissions estimations' },
+          { id: 'db', label: 'Totalum Built-in DB', type: 'db', desc: 'Postgres-compatible tenant isolated data storage via Better Auth' },
+          { id: 'storage', label: 'Cloudflare R2 / Storage', type: 'storage', desc: 'Secure PDF generation with @react-pdf/renderer & signed URLs' }
         ],
         highlights: [
-          'Automatic SHA-256 validation of Shopify payloads on ingestion.',
-          'Stateful idempotency layer prevents double-accounting on retries.',
-          'WORM (Write Once Read Many) vault ensures regulatory compliance with SEC regulations.'
+          'Automatic HMAC-SHA256 signature validation on every single Shopify payload.',
+          'Edge-first idempotency via unique DB constraints (shop, shopify_order_id).',
+          'Immutable ledger audit trails for historical regulatory disclosures.',
+          'Tenant isolation at the database layer via Better Auth session scopes.'
         ]
       }
     : {

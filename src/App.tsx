@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Terminal, ChevronRight, Github, Mail, Linkedin, Server, Shield, Database, Activity, Clock, FileText } from 'lucide-react';
 import ArchitectureModal from './components/ArchitectureModal';
 import ESGForgeVault from './components/ESGForgeVault';
+import CalendarDashboard from './components/CalendarDashboard';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<'esg-forge' | 'finesse-os' | null>(null);
@@ -13,7 +14,22 @@ export default function App() {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      setCurrentTime(now.toUTCString().replace('GMT', 'UTC'));
+      try {
+        const formatted = now.toLocaleString('en-US', {
+          timeZone: 'America/Los_Angeles',
+          hour12: false,
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          timeZoneName: 'short'
+        }).replace(',', '');
+        setCurrentTime(formatted);
+      } catch (e) {
+        setCurrentTime(now.toUTCString().replace('GMT', 'UTC'));
+      }
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);
@@ -200,6 +216,9 @@ export default function App() {
           </div>
         </section>
 
+        {/* Google Calendar Operations Dashboard */}
+        <CalendarDashboard />
+
         {/* Narrative & Core Competencies */}
         <section className="mb-24 flex flex-col gap-6" id="narrative-section">
           <div className="flex items-center gap-4 mb-6">
@@ -266,7 +285,6 @@ export default function App() {
         {/* Footer */}
         <footer className="mt-24 border-t border-[#262626] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono text-[#3F3F46] tracking-tighter gap-4" id="portfolio-footer">
           <span>HECTOR VERDUGO &copy; 2026 // ALL SYSTEMS RIGOROUSLY TESTED</span>
-          <span>LONDRES / NEW YORK / MEXICO CITY</span>
         </footer>
       </div>
 

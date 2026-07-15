@@ -194,14 +194,14 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                   <div>
                     <div className="flex items-center gap-2 mb-1.5 text-xs text-[#10B981] font-bold">
                       <Unlock size={14} />
-                      <span>VAULT SESSION ACTIVE // DECRYPTED SECURE DATA</span>
+                      <span>{"VAULT SESSION ACTIVE // DECRYPTED SECURE DATA"}</span>
                     </div>
                     <h2 className="text-2xl font-bold text-white tracking-tight">
                       ESG FORGE INTERNAL BLUEPRINTS<span className="text-[#3B82F6]">.</span>
                     </h2>
                   </div>
                   <div className="flex items-center gap-4 text-xs font-mono text-[#52525B]" id="header-spec-labels">
-                    <span className="border border-[#262626] px-2 py-1 bg-[#0F0F11] rounded-sm">CLASSIFIED // ROADMAP & SPEC DECK</span>
+                    <span className="border border-[#262626] px-2 py-1 bg-[#0F0F11] rounded-sm">{"CLASSIFIED // ROADMAP & SPEC DECK"}</span>
                   </div>
                 </div>
 
@@ -344,15 +344,38 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                         <div className="w-12 h-12 bg-[#0F0F11] border border-[#262626] flex items-center justify-center font-bold text-white rounded-sm shrink-0 font-mono text-sm">
                           HV
                         </div>
-                        <div>
-                          <span className="text-[10px] uppercase font-bold text-[#3B82F6] font-mono tracking-widest block mb-1">Founder Spotlight & Advocacy</span>
-                          <h4 className="text-base font-bold text-white font-mono mb-2">Hector Verdugo // Homeboy Industries</h4>
-                          <p className="text-xs text-[#A1A1AA] leading-loose font-light mb-4">
-                            Hector Verdugo is a prominent figure in community service and social enterprise, best known for his previous leadership role at <strong>Homeboy Industries</strong>, a Los Angeles-based organization dedicated to providing support, rehabilitation, and employment opportunities for formerly incarcerated individuals and those seeking to safely exit gang life.
+                        <div className="flex-1 space-y-4">
+                          <div>
+                            <span className="text-[10px] uppercase font-bold text-[#3B82F6] font-mono tracking-widest block mb-1">Founder Spotlight</span>
+                            <h4 className="text-base font-bold text-white font-mono">Hector — Co-Founder & CEO, EsgForge</h4>
+                          </div>
+                          
+                          <p className="text-xs text-[#A1A1AA] leading-relaxed font-light font-sans">
+                            Hector is a self-taught builder and founder whose journey into RegTech was forged through resilience and necessity. After a serious injury left him bed-bound for over six months, he transformed a period of recovery into intensive self-education — diving deep into regulatory compliance, carbon accounting, Shopify ecosystems, and automation technologies. What started as a way to stay productive became the foundation for solving a massive problem he knew mid-market merchants were about to face.
                           </p>
-                          <p className="text-xs text-[#A1A1AA] leading-loose font-light">
-                            Born and raised in the Ramona Gardens Housing Project in East Los Angeles, Verdugo's personal experiences have deeply influenced his professional path. Joining a gang at 14 and facing severe life challenges, his transition to community leadership forged a relentless obsession with structural resilience and compliance — a focus he now applies to scaling software platforms with extreme architectural integrity.
+
+                          <p className="text-xs text-[#A1A1AA] leading-relaxed font-light font-sans">
+                            Witnessing the wave of mandatory ESG regulations (<strong className="text-white">EU CSRD</strong>, <strong className="text-white">California SB 253/261</strong>, and expanding U.S. state/federal requirements), Hector identified that Shopify Plus merchants generating <strong className="text-white">$1M–$500M+ in revenue</strong> were caught in a perfect storm: complex Scope 1-3 reporting demands with zero ESG teams and broken manual processes. He built EsgForge from the ground up to automate what used to require spreadsheets, consultants, and guesswork — turning Shopify transaction data, logistics, and emissions factors into audit-ready, GHG Protocol-compliant reports.
                           </p>
+
+                          <p className="text-xs text-[#A1A1AA] leading-relaxed font-light font-sans">
+                            As the technical and visionary lead, Hector has architected EsgForge’s headless integration, multi-tenant architecture, and merchant-facing dashboard so brands can achieve compliance without hiring specialists. His mission is personal: make sustainability reporting effortless and defensible so e-commerce founders can focus on growth instead of regulatory survival.
+                          </p>
+
+                          <p className="text-xs text-[#A1A1AA] leading-relaxed font-light font-sans">
+                            Hector’s story resonates strongly with the operators and agencies EsgForge serves — proof that determination and smart automation can level the playing field against complex global regulations. He is currently onboarding the founding cohort of merchants and partners who want to get ahead of the compliance wave.
+                          </p>
+
+                          <div className="bg-black/40 border border-[#262626] p-4 rounded-sm text-xs space-y-2" id="founder-contact-card">
+                            <span className="text-[10px] font-mono font-bold text-[#3B82F6] uppercase tracking-wider block">Direct Connection Terminal</span>
+                            <p className="text-[#A1A1AA] leading-relaxed font-sans font-light">
+                              Connect with Hector to share your compliance challenges or explore partnership opportunities:
+                            </p>
+                            <div className="flex flex-wrap gap-x-6 gap-y-1 text-[11px] font-mono text-white pt-1">
+                              <span>EMAIL: <a href="mailto:founder@esgforge.xyz" className="text-[#3B82F6] hover:underline">founder@esgforge.xyz</a></span>
+                              <span>PHONE: <a href="tel:858-288-3502" className="text-[#3B82F6] hover:underline">858-288-3502</a></span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </motion.div>
@@ -378,7 +401,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                         <div className="relative" id="roadmap-phase-1">
                           <span className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#3B82F6] border-2 border-[#050505]"></span>
                           <span className="text-[10px] font-bold font-mono text-[#3B82F6] bg-[#3B82F6]/10 px-2.5 py-0.5 uppercase tracking-wider rounded-sm">
-                            Phase 1 // MVP Completion & pilot (July 2026)
+                            {"Phase 1 // MVP Completion & pilot (July 2026)"}
                           </span>
                           <h4 className="text-sm font-bold text-white font-mono mt-3 mb-2">Core Emissions Data Pipeline</h4>
                           <div className="grid md:grid-cols-2 gap-4 mt-2 mb-4" id="phase-1-grid">
@@ -405,7 +428,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                         <div className="relative" id="roadmap-phase-2">
                           <span className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#10B981] border-2 border-[#050505]"></span>
                           <span className="text-[10px] font-bold font-mono text-[#10B981] bg-[#10B981]/10 px-2.5 py-0.5 uppercase tracking-wider rounded-sm">
-                            Phase 2 // App Store Launch (August - September 2026)
+                            {"Phase 2 // App Store Launch (August - September 2026)"}
                           </span>
                           <h4 className="text-sm font-bold text-white font-mono mt-3 mb-2">Founding Merchant Cohort</h4>
                           <div className="grid md:grid-cols-2 gap-4 mt-2 mb-4" id="phase-2-grid">
@@ -432,7 +455,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                         <div className="relative" id="roadmap-phase-3">
                           <span className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#A1A1AA] border-2 border-[#050505]"></span>
                           <span className="text-[10px] font-bold font-mono text-[#A1A1AA] bg-[#A1A1AA]/10 px-2.5 py-0.5 uppercase tracking-wider rounded-sm">
-                            Phase 3 // Infrastructure Scale (October 2026)
+                            {"Phase 3 // Infrastructure Scale (October 2026)"}
                           </span>
                           <h4 className="text-sm font-bold text-white font-mono mt-3 mb-2">Platform Scale & Multi-Currency Support</h4>
                           <div className="grid md:grid-cols-2 gap-4 mt-2 mb-4" id="phase-3-grid">
@@ -441,7 +464,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                               <ul className="space-y-1.5 text-xs text-[#A1A1AA] leading-relaxed list-disc pl-4">
                                 <li>Optimize DB indexes to ensure <strong className="text-white">&lt;200ms queries</strong> under load</li>
                                 <li>Implement local caching layer for Climatiq emission factors (TTL-based)</li>
-                                <li>Integrate asynchronous webhook scheduling queues (BullMQ/Redis)</li>
+                                <li>Integrate asynchronous webhook scheduling queues (Cloudflare Queues / Durable Objects)</li>
                               </ul>
                             </div>
                             <div className="bg-[#0F0F11] border border-[#262626] p-4 rounded-sm">
@@ -459,7 +482,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                         <div className="relative" id="roadmap-phase-4">
                           <span className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#EAB308] border-2 border-[#050505]"></span>
                           <span className="text-[10px] font-bold font-mono text-[#EAB308] bg-yellow-500/10 px-2.5 py-0.5 uppercase tracking-wider rounded-sm">
-                            Phase 4 // Internationalization & VC Funding (Nov - Dec 2026)
+                            {"Phase 4 // Internationalization & VC Funding (Nov - Dec 2026)"}
                           </span>
                           <h4 className="text-sm font-bold text-white font-mono mt-3 mb-2">Expansion, Compliance Statements & Series A Prep</h4>
                           <div className="grid md:grid-cols-2 gap-4 mt-2 mb-4" id="phase-4-grid">
@@ -511,19 +534,19 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <div className="space-y-3 text-xs">
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Frontend Framework</span>
-                              <span className="text-white">Next.js App Router // React 18+ // Tailwind CSS</span>
+                              <span className="text-white">{"Next.js 15 (App Router) // React // Tailwind CSS // Radix UI / shadcn"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Backend Edge Compute</span>
-                              <span className="text-white">Next.js API routes (Serverless & Latency-Sensitive Edge functions)</span>
+                              <span className="text-white">{"Next.js Edge Functions / API Routes (Cloudflare Workers via opennextjs-cloudflare)"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Database Architecture</span>
-                              <span className="text-white">Supabase Managed Postgres with strict Row Level Security (RLS) policies</span>
+                              <span className="text-white">{"Totalum Built-in DB (Postgres-compatible) with tenant isolation"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Authentication Engine</span>
-                              <span className="text-white">Supabase JWT Auth (user-facing) & Bearer Service-Key (server-to-server)</span>
+                              <span className="text-white">{"Better Auth (full ownership, multi-tenancy ready)"}</span>
                             </div>
                           </div>
                         </div>
@@ -535,19 +558,19 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <div className="space-y-3 text-xs">
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Storage Platform</span>
-                              <span className="text-white">Supabase Storage Buckets // Reports, exported CSV arrays, audit-ready PDFs</span>
+                              <span className="text-white">{"Cloudflare R2 / Storage (Signed URLs) // PDF gen via @react-pdf/renderer"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Background Workers</span>
-                              <span className="text-white">BullMQ (Redis-backed) or Supabase pg_cron for async webhook parsing</span>
+                              <span className="text-white">{"Cloudflare Queues / Durable Objects or in-app asynchronous scheduling"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Integration APIs</span>
-                              <span className="text-white">Shopify Admin API webhooks (inbound) & Climatiq API (emissions mapping)</span>
+                              <span className="text-white">{"Shopify Plus Webhooks (ORDERS_FULFILLED + GDPR) & Climatiq API (server Bearer)"}</span>
                             </div>
                             <div>
                               <span className="text-[#52525B] font-mono font-bold block uppercase text-[10px]">Monitoring & Diagnostics</span>
-                              <span className="text-white">Sentry (error tracking) & active HTTP checkups tracking Climatiq response delay</span>
+                              <span className="text-white">{"Sentry (error tracking) & Pino logging"}</span>
                             </div>
                           </div>
                         </div>
@@ -626,7 +649,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <div>
                             <span className="text-white font-bold block mb-1">Security & Access CC6</span>
                             <p className="leading-relaxed font-light mb-3">
-                              Row Level Security (RLS) is strictly active on all Supabase tables. Merchant domains are fully isolated to guarantee cross-tenant confidentiality. Administrative access requires mandatory Multi-Factor Authentication (MFA).
+                              Tenant isolation is strictly active at the database layer via Better Auth session scoping. Merchant domains are fully isolated to guarantee cross-tenant confidentiality. Administrative access requires mandatory Multi-Factor Authentication (MFA).
                             </p>
                           </div>
                           <div>
@@ -720,7 +743,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                             </p>
                           </div>
                           <div className="mt-4 border-t border-[#1C1C21] pt-2 text-[10px] font-mono text-[#EAB308]">
-                            LTV:CAC RATIO // 5.3:1
+                            {"LTV:CAC RATIO // 5.3:1"}
                           </div>
                         </div>
                       </div>
@@ -809,7 +832,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                             <div className="flex items-center justify-between border-b border-[#1C1C21] pb-2">
                               <div>
                                 <span className="font-bold text-white block">Year 1 Projection</span>
-                                <span className="text-[10px] text-[#52525B]">40 Customers // $5K average contract value (ACV)</span>
+                                <span className="text-[10px] text-[#52525B]">{"40 Customers // $5K average contract value (ACV)"}</span>
                               </div>
                               <span className="font-mono text-[#3B82F6] font-bold">$200K ARR</span>
                             </div>
@@ -817,7 +840,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                             <div className="flex items-center justify-between border-b border-[#1C1C21] pb-2">
                               <div>
                                 <span className="font-bold text-white block">Year 2 Projection</span>
-                                <span className="text-[10px] text-[#52525B]">180 Customers // 90% customer retention rate</span>
+                                <span className="text-[10px] text-[#52525B]">{"180 Customers // 90% customer retention rate"}</span>
                               </div>
                               <span className="font-mono text-[#3B82F6] font-bold">$900K ARR</span>
                             </div>
@@ -825,7 +848,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                             <div className="flex items-center justify-between pb-2">
                               <div>
                                 <span className="font-bold text-white block">Year 3 Projection</span>
-                                <span className="text-[10px] text-[#52525B]">500 Customers // High expansion/upsell potential</span>
+                                <span className="text-[10px] text-[#52525B]">{"500 Customers // High expansion/upsell potential"}</span>
                               </div>
                               <span className="font-mono text-emerald-500 font-bold">$2.5M ARR</span>
                             </div>
@@ -862,7 +885,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                                 <div>
                                   <div className="flex justify-between text-[10px] font-mono text-[#A1A1AA] mb-1">
                                     <span>Product Development</span>
-                                    <span>50% // Expand features</span>
+                                    <span>{"50% // Expand features"}</span>
                                   </div>
                                   <div className="w-full bg-black h-1.5 rounded-full overflow-hidden">
                                     <div className="bg-[#3B82F6] h-full" style={{ width: '50%' }} />
@@ -871,7 +894,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                                 <div>
                                   <div className="flex justify-between text-[10px] font-mono text-[#A1A1AA] mb-1">
                                     <span>Marketing & Distribution</span>
-                                    <span>30% // Customer acquisition</span>
+                                    <span>{"30% // Customer acquisition"}</span>
                                   </div>
                                   <div className="w-full bg-black h-1.5 rounded-full overflow-hidden">
                                     <div className="bg-[#EAB308] h-full" style={{ width: '30%' }} />
@@ -880,7 +903,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                                 <div>
                                   <div className="flex justify-between text-[10px] font-mono text-[#A1A1AA] mb-1">
                                     <span>Operations</span>
-                                    <span>20% // Regulatory advisory</span>
+                                    <span>{"20% // Regulatory advisory"}</span>
                                   </div>
                                   <div className="w-full bg-black h-1.5 rounded-full overflow-hidden">
                                     <div className="bg-emerald-500 h-full" style={{ width: '20%' }} />
@@ -898,7 +921,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <span className="text-[10px] uppercase font-bold text-[#3B82F6] font-mono block mb-1">PRIMARY CHANNEL</span>
                           <h4 className="text-xs font-bold text-white mb-2">Shopify Plus App Store</h4>
                           <ul className="space-y-1 text-[11px] text-[#A1A1AA] list-disc pl-4 font-light">
-                            <li>Budget: $5K / Expected CAC: $100</li>
+                            <li>{"Budget: $5K / Expected CAC: $100"}</li>
                             <li>Direct platform-embedded distribution</li>
                             <li>High organic search positioning on keywords</li>
                           </ul>
@@ -907,7 +930,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <span className="text-[10px] uppercase font-bold text-[#EAB308] font-mono block mb-1">SECONDARY CHANNEL</span>
                           <h4 className="text-xs font-bold text-white mb-2">Digital Ad Strategy</h4>
                           <ul className="space-y-1 text-[11px] text-[#A1A1AA] list-disc pl-4 font-light">
-                            <li>Budget: $10K / Expected CAC: $200</li>
+                            <li>{"Budget: $10K / Expected CAC: $200"}</li>
                             <li>High-relevance targeting on search queries</li>
                             <li>Addresses urgent active-deadline merchants</li>
                           </ul>
@@ -916,7 +939,7 @@ export default function ESGForgeVault({ isOpen, onClose }: ESGForgeVaultProps) {
                           <span className="text-[10px] uppercase font-bold text-[#10B981] font-mono block mb-1">PARTNERSHIP CHANNEL</span>
                           <h4 className="text-xs font-bold text-white mb-2">ESG Consulting Alliances</h4>
                           <ul className="space-y-1 text-[11px] text-[#A1A1AA] list-disc pl-4 font-light">
-                            <li>Budget: $5K / Expected CAC: $150</li>
+                            <li>{"Budget: $5K / Expected CAC: $150"}</li>
                             <li>Co-marketing & shared referral leads</li>
                             <li>Direct access to pre-qualified high ARR sellers</li>
                           </ul>
