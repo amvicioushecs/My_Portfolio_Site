@@ -4,6 +4,8 @@ import { Terminal, ChevronRight, Github, Mail, Linkedin, Server, Shield, Databas
 import ArchitectureModal from './components/ArchitectureModal';
 import ESGForgeVault from './components/ESGForgeVault';
 import CalendarDashboard from './components/CalendarDashboard';
+import PersonalBlog from './components/PersonalBlog';
+import SunoPlaylist from './components/SunoPlaylist';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<'esg-forge' | 'finesse-os' | null>(null);
@@ -218,6 +220,12 @@ export default function App() {
 
         {/* Google Calendar Operations Dashboard */}
         <CalendarDashboard />
+
+        {/* Personal Blog Workspace */}
+        <PersonalBlog />
+
+        {/* Creative Output - Suno Playlist */}
+        <SunoPlaylist />
 
         {/* Narrative & Core Competencies */}
         <section className="mb-24 flex flex-col gap-6" id="narrative-section">
