@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 import { Terminal, ChevronRight, Github, Mail, Linkedin, Server, Shield, Database, Activity, Clock, FileText } from 'lucide-react';
 import ArchitectureModal from './components/ArchitectureModal';
 import ESGForgeVault from './components/ESGForgeVault';
-import CalendarDashboard from './components/CalendarDashboard';
 import PersonalBlog from './components/PersonalBlog';
 import SunoPlaylist from './components/SunoPlaylist';
+import CalendarAppointmentButton from './components/CalendarAppointmentButton';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<'esg-forge' | 'finesse-os' | null>(null);
@@ -79,10 +79,8 @@ export default function App() {
             <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-white" id="main-title">
               HECTOR VERDUGO<span className="text-[#3B82F6]">.</span>
             </h1>
-            <p className="text-[#A1A1AA] text-lg md:text-xl font-medium max-w-2xl leading-snug font-sans">
-              Building scalable, compliance-driven SaaS platforms. 
-              Merging high-precision field operations with cloud-native 
-              architectural rigor.
+            <p className="text-[#A1A1AA] text-lg md:text-xl font-medium max-w-2xl leading-relaxed font-sans">
+              I design and build things for the web. I like the challenge of taking a rough concept and turning it into a polished, working reality. Take a look around at my projects, and let's talk if you have something you want to build.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-8 text-xs font-mono uppercase tracking-widest" id="social-links-row">
@@ -90,7 +88,7 @@ export default function App() {
                 href="https://github.com/amvicioushecs" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="flex items-center gap-2 hover:text-[#3B82F6] transition-colors border border-[#262626] px-4 py-2 bg-[#0F0F11] rounded-sm"
+                className="flex items-center gap-2 hover:text-[#3B82F6] transition-colors border-2 border-[#f5f5f8] px-4 py-2 bg-[#161719] text-[#faf1f1] rounded-sm"
                 id="github-link"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span>
@@ -108,12 +106,13 @@ export default function App() {
               </a>
               <a 
                 href="mailto:hectorverdugojr@gmail.com" 
-                className="flex items-center gap-2 hover:text-[#3B82F6] transition-colors border border-[#262626] px-4 py-2 bg-[#0F0F11] rounded-sm"
+                className="flex items-center gap-2 hover:text-[#3B82F6] transition-colors border border-[#262626] px-4 py-2 bg-[#0F0F11] rounded-sm animate-pulse"
                 id="contact-link"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span>
                 <Mail size={14}/> Contact
               </a>
+              <CalendarAppointmentButton />
             </div>
           </motion.div>
         </header>
@@ -217,9 +216,6 @@ export default function App() {
             </motion.div>
           </div>
         </section>
-
-        {/* Google Calendar Operations Dashboard */}
-        <CalendarDashboard />
 
         {/* Personal Blog Workspace */}
         <PersonalBlog />

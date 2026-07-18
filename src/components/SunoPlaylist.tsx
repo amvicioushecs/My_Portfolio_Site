@@ -113,7 +113,7 @@ export default function SunoPlaylist() {
 
         {/* Right Column: Interactive Embedded Player */}
         <div className="md:col-span-8">
-          <div className="bg-[#0F0F11] border border-[#262626] rounded-sm overflow-hidden flex flex-col h-full min-h-[480px]">
+          <div className="bg-[#0F0F11] border border-[#262626] rounded-sm overflow-hidden flex flex-col h-full min-h-[360px]">
             {/* Embedded player header */}
             <div className="flex items-center justify-between border-b border-[#262626] px-6 py-4 bg-black/60">
               <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export default function SunoPlaylist() {
             </div>
 
             {/* Playlist Iframe */}
-            <div className="flex-1 bg-[#050505] p-1 h-[450px]">
+            <div className="flex-1 bg-[#050505] p-1 h-[300px]">
               <iframe 
                 src="https://suno.com/embed/playlist/5dfb7f55-cab9-459e-a7ca-4bca9c1cf7e7" 
                 width="100%" 
